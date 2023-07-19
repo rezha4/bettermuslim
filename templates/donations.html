@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}BetterMuslim{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <h1>Your Balance: {{ wallet }}</h1>
+        <div>
+            <form action="/donations" method="post" class="row row-cols-lg-auto g-3 align-items-center">
+                <label for="toDoInput" class="form-label">Enter a top up amount</label>
+                <input type="text" id="cashAmount" name="cashAmount">
+                <button type="submit" class="btn btn-primary mb-3" id="cashEnter" name="cashEnter">Top Up!</button>
+            </form>
+        </div>
+    </div>  
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card" style="width: 18rem;">
+                <img src="static/yemen.jpg" class="card-img-top" alt="yemen">
+                <div class="card-body">
+                  <h5 class="card-title">Donate to Yemen</h5>
+                  <p class="card-text">Donate to Yemen that are impacted by conflict</p>
+                  <form action="/donate" method="post">
+                    <input type="number" id="donoAmount" name="donoAmount">
+                    <button class="btn btn-primary" type="submit">Donate</button>
+                  </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card" style="width: 18rem;">
+                <img src="static/pakistan.jpg" class="card-img-top" alt="yemen">
+                <div class="card-body">
+                  <h5 class="card-title">Donate to Pakistan</h5>
+                  <p class="card-text">Donate to Pakistan that are impacted by disaster</p>
+                  <form action="/donate" method="post">
+                    <input type="number" id="donoAmount" name="donoAmount">
+                    <button class="btn btn-primary" type="submit">Donate</button>
+                  </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card" style="width: 18rem;">
+                <img src="static/turki.jpg" class="card-img-top" alt="yemen">
+                <div class="card-body">
+                  <h5 class="card-title">Donate to Turkey</h5>
+                  <p class="card-text">Donate to Turkey that are impacted by disaster</p>
+                  <form action="/donate" method="post">
+                    <input type="number" id="donoAmount" name="donoAmount">
+                    <button class="btn btn-primary" type="submit">Donate</button>
+                  </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}
